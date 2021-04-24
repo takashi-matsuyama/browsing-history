@@ -14,6 +14,7 @@ if( ! class_exists( 'CCC_Browsing_History_ShortCode_List' ) ) {
         "title" => '',
         "posts_per_page" => '',
         "class" => '',
+        "style" => '',
       ),$atts);
       if( $atts['title'] ) {
         $title = $atts['title'];
@@ -30,9 +31,14 @@ if( ! class_exists( 'CCC_Browsing_History_ShortCode_List' ) ) {
       } else {
         $class = null;
       }
+      if( $atts['style'] or $atts['style'] === 0 or $atts['style'] === '0' ) {
+        $style = $atts['style'];
+      } else {
+        $style = 1;
+      }
       $data = '<div id="content-ccc_browsing_history">';
       $data .= '<p class="title-section">'.$title.'</p>';
-      $data .= '<div id="ccc-browsing_history-list" data-ccc_history-posts_per_page="'.$posts_per_page.'" '.$class.'></div>'; //<!-- /#ccc-browsing_history-list -->
+      $data .= '<div id="ccc-browsing_history-list" data-ccc_browsing_history-list-style="'.$style.'" data-ccc_history-posts_per_page="'.$posts_per_page.'" '.$class.'></div>'; //<!-- /#ccc-browsing_history-list -->
       $data .= '</div>'; //<!-- /#content-ccc_browsing_history -->
       return $data;
     } //endfunction

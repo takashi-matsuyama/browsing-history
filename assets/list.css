@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/****** Common : START ******/
 #ccc-browsing_history-list {
   position: relative;
   overflow: hidden;
@@ -8,45 +9,51 @@
   text-align: center;
   margin-bottom: 2em;
 }
-#post-ccc_browsing_history {
-  font-size: 0;
+/****** Common : END ******/
+
+
+
+
+/****** Style: [data-ccc_browsing_history-list-style="1"]: START ******/
+#ccc-browsing_history-list[data-ccc_browsing_history-list-style="1"] #post-ccc_browsing_history {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   width: calc(100% + 1%);
 }
-#post-ccc_browsing_history .list-ccc_browsing_history {
-  font-size: 15px;
-  display: inline-block;
-  vertical-align: top;
+#ccc-browsing_history-list[data-ccc_browsing_history-list-style="1"] #post-ccc_browsing_history .list-ccc_browsing_history {
+  font-size: 0.9em;
   box-sizing: border-box;
   width: calc(12.5% - 1%);
   margin: 0 1% 1% 0;
   position: relative;
 }
-#post-ccc_browsing_history .title-post {
+#ccc-browsing_history-list[data-ccc_browsing_history-list-style="1"] #post-ccc_browsing_history .title-post {
   font-size: 0.9em;
   font-weight: 500;
   line-height: 1.3;
   margin: 0.25em 0;
 }
-#post-ccc_browsing_history .title-post .dotted-line {
+/* 三点リーダー */
+#ccc-browsing_history-list[data-ccc_browsing_history-list-style="1"] #post-ccc_browsing_history .title-post .dotted-line {
   display: inline-block;
   vertical-align: top;
+  box-sizing: border-box;
   max-height: 2.5em;
   overflow: hidden;
+  position: relative;
 }
-#post-ccc_browsing_history .ccc-favorite-post-toggle {
-  line-height: 1.3;
-  margin-top: -19px;
-}
-
-
 /* SP
 ----------------------------------------------------------*/
 @media only screen and (max-width: 750px) {
-  #post-ccc_browsing_history {
+  #ccc-browsing_history-list[data-ccc_browsing_history-list-style="1"] #post-ccc_browsing_history {
     width: calc(100% + 3%);
   }
-  #post-ccc_browsing_history .list-ccc_browsing_history {
+  #ccc-browsing_history-list[data-ccc_browsing_history-list-style="1"] #post-ccc_browsing_history .list-ccc_browsing_history {
     width: calc(33.33% - 3%);
     margin: 0 3% 3% 0;
   }
 }
+/****** Style: [data-ccc_browsing_history-list-style="1"]: END ******/
