@@ -32,7 +32,7 @@ class CCC_Browsing_History {
       global $post;
       $post_id = $post->ID;
     }
-    $handle = 'ccc_browsing_history-save-js';
+    $handle = 'ccc_browsing_history-save';
     $file = 'save.js';
     wp_register_script( $handle, CCCBROWSINGHISTORY_PLUGIN_URL.'/assets/'.$file, array( 'jquery' ), CCCBROWSINGHISTORY_PLUGIN_VERSION, true );
     wp_enqueue_script( $handle );
@@ -90,11 +90,11 @@ class CCC_Browsing_History {
 
 
   public function list_styles() {
-    wp_enqueue_style( 'ccc_browsing_history-list-css', CCCBROWSINGHISTORY_PLUGIN_URL.'/assets/list.css', array(), CCCBROWSINGHISTORY_PLUGIN_VERSION, 'all');
+    wp_enqueue_style( 'ccc_browsing_history-list', CCCBROWSINGHISTORY_PLUGIN_URL.'/assets/list.css', array(), CCCBROWSINGHISTORY_PLUGIN_VERSION, 'all');
   } //endfunction
 
   public function list_scripts() {
-    $handle = 'ccc_browsing_history-list-js';
+    $handle = 'ccc_browsing_history-list';
     $file = 'list.js';
     wp_register_script( $handle, CCCBROWSINGHISTORY_PLUGIN_URL.'/assets/'.$file, array( 'jquery' ), CCCBROWSINGHISTORY_PLUGIN_VERSION, true );
     wp_enqueue_script( $handle );
@@ -122,14 +122,3 @@ class CCC_Browsing_History {
 
 
 } //endclass
-
-
-
-
-
-
-
-
-
-
-
