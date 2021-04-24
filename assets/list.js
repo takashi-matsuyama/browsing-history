@@ -2,7 +2,7 @@
 * Author: Takashi Matsuyama
 * Author URI: https://profiles.wordpress.org/takashimatsuyama/
 * Description: WordPressで投稿の閲覧履歴を一覧で表示
-* Version: 1.0.0
+* Version: 1.0.0 or later
 */
 
 /*

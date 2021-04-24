@@ -2,7 +2,7 @@
 * Author: Takashi Matsuyama
 * Author URI: https://profiles.wordpress.org/takashimatsuyama/
 * Description: WordPressで投稿の閲覧履歴をローカルストレージとMySQLのユーザーメタ（wp_usermeta）に保存
-* Version: 1.0.0
+* Version: 1.0.0 or later
 */
 
 /* グローバルネームスペース */

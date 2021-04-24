@@ -5,7 +5,7 @@ Tags: browsing history, accessibility, design
 Requires at least: 4.8
 Tested up to: 5.6
 Requires PHP: 5.4.0
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,6 +32,9 @@ The logged-in user's data is saved in the user meta. Other user's data is saved 
 == Screenshots ==
 
 == Changelog ==
+
+= 1.2.0 =
+Modify markup of thumbnails and modify CSS.
 
 = 1.1.0 =
 Add shortcode attribute (`style=""`) and modify CSS.
