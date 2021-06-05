@@ -31,6 +31,8 @@ class CCC_Browsing_History {
     if( ! ( is_home() or is_front_page() ) and ( is_single() or is_page() ) ) {
       global $post;
       $post_id = $post->ID;
+    } else {
+      $post_id = null;
     }
     $handle = 'ccc_browsing_history-save';
     $file = 'save.js';

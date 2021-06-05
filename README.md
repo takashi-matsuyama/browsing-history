@@ -2,15 +2,15 @@
 
 This is the development repository for Browsing History, a WordPress plugin that saves user's browsing history and lists them. You can also download the plugin package installation from the [WordPress.org Plugin Directory](https://wordpress.org/plugins/browsing-history/).
 
-Contributors: takashimatsuyama
-Donate link:
-Tags: browsing history, accessibility, design
-Requires at least: 4.8
-Tested up to: 5.7
-Requires PHP: 5.4.0
-Stable tag: 1.2.1
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Contributors: takashimatsuyama  
+Donate link:  
+Tags: browsing history, accessibility, design  
+Requires at least: 4.8  
+Tested up to: 5.7  
+Requires PHP: 5.4.0  
+Stable tag: 1.2.2  
+License: GPLv2 or later  
+License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
 Save user’s browsing history and list them.
 
@@ -35,6 +35,9 @@ Detailed usage is under preparation.
 3. Use shortcodes to display the browsing history list.
 
 ##  Changelog
+
+# 1.2.2
+Fixed PHP 8.0 warning.
 
 # 1.2.1
 Modify the handle names of wp_enqueue_script.
