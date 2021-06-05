@@ -36,17 +36,17 @@ Detailed usage is under preparation.
 
 ##  Changelog
 
-# 1.2.2
+### 1.2.2
 Fixed PHP 8.0 warning.
 
-# 1.2.1
+### 1.2.1
 Modify the handle names of wp_enqueue_script.
 
-# 1.2.0
+### 1.2.0
 Modify markup of thumbnails and modify CSS.
 
-# 1.1.0
+### 1.1.0
 Add shortcode attribute (`style=""`) and modify CSS.
 
-# 1.0.0
+### 1.0.0
 Initial release.
