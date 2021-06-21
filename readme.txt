@@ -23,7 +23,11 @@ The logged-in user's data is saved in the user meta. Other user's data is saved 
 
 * **Shortcode:** `[ccc_browsing_history_list_results title="" posts_per_page="" class="" style=""]`
 
-Detailed usage is under preparation.
+You can show only specific post types.
+* **Shortcode:** `[ccc_browsing_history_list_results post_type="post"]`
+* **Shortcode:** `[ccc_browsing_history_list_results post_type="post, page, custom"]`
+
+default: "any", It doesn't need "post_type".
 
 == Installation ==
 
