@@ -3,7 +3,7 @@
  * Plugin Name: Browsing History
  * Plugin URI: https://wordpress.org/plugins/browsing-history
  * Description: Save user’s browsing history and list them.
- * Version: 1.2.2
+ * Version: 1.3.0
  * Requires at least: 4.8
  * Requires PHP: 5.4.0
  * Author: Takashi Matsuyama
@@ -53,7 +53,7 @@ if( ! class_exists( 'CCC_Browsing_History' ) ) {
 
   /*** How to use this Shortcode ***/
   /*
-  * [ccc_browsing_history_list_results title="string" posts_per_page="int" class="string" style="string"]
+  * [ccc_browsing_history_list_results title="string" posts_per_page="int" class="string" style="string" post_type="string (string, string, string)"]
   */
   require( CCCBROWSINGHISTORY_PLUGIN_PATH .'/assets/shortcode-list.php' );
 

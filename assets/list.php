@@ -20,15 +20,24 @@ if( ! class_exists( 'CCC_Browsing_History_List' ) ) {
       $browsing_history_post_ids = array_map('htmlspecialchars', $browsing_history_post_ids); // 配列データを一括でサニタイズする
 
       /*** 表示数の定義（指定が無ければ管理画面の表示設定（表示する最大投稿数）の値を取得） ***/
-      $ccc_posts_per_page = absint( $_POST['ccc-posts_per_page'] ); //負ではない整数に変換
-      if( $ccc_posts_per_page ) {
-        $posts_per_page = $ccc_posts_per_page;
+      if( isset( $_POST['ccc-posts_per_page'] ) ) {
+        $posts_per_page = absint( $_POST['ccc-posts_per_page'] ); //負ではない整数に変換
       } else {
         $posts_per_page = get_option('posts_per_page');
       }
 
+      /*** ポストタイプの定義（指定が無ければ "any"） ***/
+      if( isset( $_POST['ccc-post_type'] ) and $_POST['ccc-post_type'] !== 'any' ) {
+        $post_type = explode(',', $_POST['ccc-post_type']); //文字列をカンマで区切って配列に変換
+        $post_type = str_replace(array(" ", "　"), "", $post_type); //配列の各要素の中にある半角空白と全角空白を取り除く（""に置き換え）
+        $post_type = array_map('sanitize_text_field', $post_type); // 配列データを一括でサニタイズする
+      } else {
+        $post_type = 'any'; // リビジョンと 'exclude_from_search' が true にセットされたものを除き、すべてのタイプを含める
+      }
+      //print_r($post_type);
+
       $args= array(
-        'post_type' => 'any', // リビジョンと 'exclude_from_search' が true にセットされたものを除き、すべてのタイプを含める
+        'post_type' => $post_type,
         'posts_per_page' => $posts_per_page,
         'post__in' => $browsing_history_post_ids,
         'orderby' => 'post__in',

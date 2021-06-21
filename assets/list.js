@@ -2,7 +2,7 @@
 * Author: Takashi Matsuyama
 * Author URI: https://profiles.wordpress.org/takashimatsuyama/
 * Description: WordPressで投稿の閲覧履歴を一覧で表示
-* Version: 1.0.0 or later
+* Version: 1.3.0 or later
 */
 
 /*
@@ -16,7 +16,6 @@ var CCC = CCC || {};
 (function($) {
   var content_area_elm = $('#content-ccc_browsing_history');
   var post_area_elm = $('#ccc-browsing_history-list');
-  var posts_per_page_value = post_area_elm.data('ccc_history-posts_per_page');
 
   var history_key = CCC.browsing_history.storage_key(); // 過去に閲覧した投稿を保存するストレージキーの名前を変数に格納（CCC.favoriteのstorage_key関数を呼び出し）
   var history_value = localStorage.getItem(history_key); // ローカルストレージから指定したキーの値を取得
@@ -24,7 +23,8 @@ var CCC = CCC || {};
   data_set['action'] = CCC_BROWSING_HISTORY_LIST.action;
   data_set['nonce'] = CCC_BROWSING_HISTORY_LIST.nonce;
   data_set[history_key] = history_value;
-  data_set['ccc-posts_per_page'] = posts_per_page_value;
+  data_set['ccc-posts_per_page'] = post_area_elm.data('ccc_browsing_history-posts_per_page');
+  data_set['ccc-post_type'] = post_area_elm.data('ccc_browsing_history-post_type');
 
   $.ajax({
     type: 'POST',
