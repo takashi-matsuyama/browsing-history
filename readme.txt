@@ -3,9 +3,9 @@ Contributors: takashimatsuyama
 Donate link:
 Tags: browsing history, accessibility, design
 Requires at least: 4.8
-Tested up to: 5.8
+Tested up to: 6.0
 Requires PHP: 5.4.0
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,7 +41,7 @@ This plugin is [developed on GitHub](https://github.com/takashi-matsuyama/browsi
 
 == Changelog ==
 
-= 1.3.0 =
-Add a shortcode attribute to show only specific post types.
+= 1.3.1 =
+Tested on WordPress 6.0.
 
 See the [release notes on GitHub](https://github.com/takashi-matsuyama/browsing-history/releases).

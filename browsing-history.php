@@ -3,7 +3,7 @@
  * Plugin Name: Browsing History
  * Plugin URI: https://wordpress.org/plugins/browsing-history
  * Description: Save user’s browsing history and list them.
- * Version: 1.3.0
+ * Version: 1.3.1
  * Requires at least: 4.8
  * Requires PHP: 5.4.0
  * Author: Takashi Matsuyama
